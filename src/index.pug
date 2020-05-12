@@ -17,23 +17,28 @@ html(lang="en")
             ul.header__contacts
               li.header__contacts-item
                 +icon('letter', '')
-                a.header__contacts-link(href="mailto:info@enstil.ru") info@enstil.ru
+                a.header__contacts-link(href="mailto:info@enstil.ru" target="_blank") info@enstil.ru
               li.header__contacts-item
                 +icon('phone', '')
-                a.header__contacts-link(href="tel:+78129886231") 8 (812) 988-62-31
+                a.header__contacts-link(href="tel:+78129886231" target="_blank") 8 (812) 988-62-31
           section.lead
             .lead__wrapper
               .lead__left
                 h1.lead__title Проектирование инженерных систем и оборудования
                 p.lead__subtitle Выполняем проекты инженерных системы и коммуникаций в BIM. Гарантируем подбор оптимального оборудования на основе расчетов потребления и согласно нормативным показателям.
-                a.lead__button(href="#") Все услуги
+                a.lead__button(href="#services") Все услуги
               .lead__right
                 .lead__image-wrapper 
                   +image('content/lead.png', '')
-
+          .triangles
+            svg(viewbox="0 0 1000 100" preserveAspectRatio="none").triangles-item.triangle
+              polygon(points="0,0 0,100, 1000,100")
+            svg(viewbox="0 0 1000 100" preserveAspectRatio="none").triangles-item.triangle
+              polygon(points="1000,0 1000,100, 0,100")
         section.services
+          a(name="services")
           .services__wrapper
-            h2.services__title Наши услуги
+            h2.services__title(name="services") Наши услуги
             .services__content
               .services__block
                 .services__image-wrapper 
@@ -95,8 +100,8 @@ html(lang="en")
 
               .contacts__block-item.contacts__block-item_phone
                 .contacts__block-title Позвонить
-                a.contacts__block-value(href="tel:+78129886231") 8 (812) 988-62-31
+                a.contacts__block-value(href="tel:+78129886231" target="_blank") 8 (812) 988-62-31
 
               .contacts__block-item.contacts__block-item_email
                 .contacts__block-title Отправить запрос
-                a.contacts__block-value(href="mailto:info@enstil.ru")  info@enstil.ru
+                a.contacts__block-value(href="mailto:info@enstil.ru" target="_blank")  info@enstil.ru
