@@ -2,10 +2,12 @@
 .welcome {
   background-color: #EEF1FA;
   margin-bottom: 100px;
+  padding: 0 20px;
 }
 
 .header {
   max-width: 1170px;
+
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -14,8 +16,19 @@
   margin-bottom: 100px;
 }
 
+.header__logo {
+  margin-right: 20px;
+  @include phones {
+    width: 50%;
+  }
+}
+
 .header__contacts {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .header__contacts-item {
@@ -23,6 +36,14 @@
   display: flex;
   align-items: center;
   font-weight: 600;
+
+  @include phones {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   &:last-child {
     margin-right: 0;
@@ -59,6 +80,18 @@
 .lead__left {
   width: 50%;
   margin-right: 30px;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.lead__right {
+  width: 50%;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .lead__title {
@@ -94,6 +127,7 @@
 .services__wrapper {
   max-width: 1170px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .services__title {
@@ -105,11 +139,34 @@
   display: flex;
   align-items: center;
   margin-bottom: 100px;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    border-radius: 4px;
+    background: #126CD2;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .services__desc {
   width: 60%;
   margin: 0 50px;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .services__block-title {
@@ -149,6 +206,10 @@
 
 .services__image-wrapper {
   margin: 0 50px;
+
+  @include phones {
+    order: 2;
+  }
 }
 
 .contacts {
@@ -166,6 +227,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include desktop {
+    left: 50%;
+  }
+
+  @include tablets {
+    left: 40%;
+  }
+
+  @include phones {
+    position: static;
+    padding: 50px 30px;
+  }
 }
 
 .contacts__block_title {
@@ -191,7 +265,6 @@
     display: block;
     width: 50px;
     height: 50px;
-    
   }
 
   &_address {
@@ -214,8 +287,6 @@
       background-repeat: no-repeat;
     }
   }
-
-  
 }
 
 .contacts__block-title {
