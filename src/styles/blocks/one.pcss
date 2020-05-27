@@ -170,8 +170,13 @@
 }
 
 .services__desc {
-  width: 60%;
+  width: 50%;
   margin: 0 50px;
+
+  &_full-width {
+    width: 80%;
+    margin: 0 auto;
+  }
 
   @include phones {
     width: 100%;
@@ -215,6 +220,7 @@
 
 .services__image-wrapper {
   margin: 0 50px;
+  width: 50%;
 
   @include phones {
     order: 2;
