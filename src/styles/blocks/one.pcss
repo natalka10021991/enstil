@@ -162,6 +162,10 @@
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
+
+    @include phones {
+      bottom: -50px;
+    }
   }
 
   @include phones {
@@ -216,6 +220,9 @@
       background: #126CD2;
     }
   }
+  @include phones {
+    margin-bottom: 20px;
+  }
 }
 
 .services__image-wrapper {
@@ -224,6 +231,7 @@
 
   @include phones {
     order: 2;
+    width: 100%;
   }
 }
 
